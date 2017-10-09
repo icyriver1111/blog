@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    /*基础选择器*/
+    /*通用选择器，匹配页面任何元素，这也决定了我们很少使用*/
+    * {
+      border: 1px solid;
+    }
+    /*标签选择器*/
+    div {
+      border: 2px solid;
+    }
+    /*id选择器，匹配特定id的元素*/
+    #content1 {
+      color: #008842;
+
+    }
+    /*类选择器，匹配class包含（不是等于）特定类的元素*/
+    .item1 {
+      color: red;
+    }
+    /*组合选择器*/
+   /*E,F 多元素选择器，用,分隔，同时匹配元素E或元素F*/
+    .comment-body, .comment-footer{
+      color: blue;
+    }
+    /*E F 后代选择器，用空格分隔，匹配E元素所以的后代（不只是子元素，子元素向下递归）元素F*/
+    #content1 .comment-body{
+      color: greed;
+    }
+    /*E>F 子元素选择器，用>分隔，匹配E元素所有的直接子元素*/
+    #content1>.comment{
+      border: 1px solid;
+    }
+    /*E+F直接相邻选择器，匹配E元素之后的相邻同级元素F*/
+    .comment-body+.comment-footer {
+      color: blue;
+    }
+    /*E~F普通相邻选择器，匹配E元素之后的同级F(无论直接相邻与否)*/
+    .comment-body~.comment-footer {
+      font-size: 20px;
+    }
+    /*.class1.class2  element#id  id和class的选择器在中间没有分隔符的时候，.和#本身充当分隔符的元素*/
+    h3.item1{
+      font-family: sans-serif;
+    }
+    /*属性选择器*/
+    input[type=password] {
+      width: 200px;
+    }
+    /*伪类选择器*/
+    /*匹配器父元素的第1个子元素*/
+    .item1:first-child {
+      color:red;
+    }
+    /*匹配父元素下同种类型标签的第一个*/
+    .item1:first-of-type {
+      background: blue;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="ct">
+      <p class="item1">aa</p>
+      <h3 class="itme1">bb</h3>
+      <h3 class="itme1">ccc</h3>
+
+    </div>
+    <div id="content1">
+      <div class="comment">
+        <p class="comment-body">aa
+          <span class="p1">span-p1</span>
+          <span class="p1">span-p2</span>
+
+        </p>
+        <p class="comment-footer">bb</p>
+        <p class="p1">p1</p>
+        <p class="p2">p2</p>
+        <p class="p3">p3</p>
+
+      </div>
+
+    </div>
+    <input type="password" name="password" value="password" placeholder="输入密码">
+    <input type="text" name="login" value="nickname" placeholder="姓名">
+
+  </body>
+</html>

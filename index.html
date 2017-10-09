@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ZH">
+  <head>
+    <!-- 声明字符编码,确保浏览器快速并容易判断页面内容的渲染方式 -->
+    <meta charset="utf-8">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- 声明移动端的显示模式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <div class="login">
+
+      <!-- action代表的是请求的服务器路径 -->
+      <form  action="/abc" method="get">
+      <div class="username">
+        <label for="username">姓名：</label>
+        <input id="username" type="text" name="username" placeholder="用户名">
+      </div>
+      <div class="password">
+        <label for="password">密码：</label>
+        <input id="password" type="password" name="password" placeholder="输入密码">
+      </div>
+      <div class="gender">
+        <label>性别：</label>
+        <input type="radio" name="gender" value="男">男
+        <input type="radio" name="gender" value="女">女
+
+      </div>
+      <div class="sex">
+        <label>取向：</label>
+        <input type="radio" name="sex" value="男">男
+        <input type="radio" name="sex" value="女">女
+
+      </div>
+      <div class="hobby">
+        <label>爱好</label>
+        <input type="checkbox" name="hobby" value="dota">dota
+        <input type="checkbox" name="hobby" value="旅游">旅游
+        <input type="checkbox" name="hobby" value="宠物">宠物
+      </div>
+      <div class="textarea">
+        <label>评论：</label>
+        <textarea name="name" rows="8" cols="80"></textarea>
+      </div>
+      <div class="footer">
+        <label>我的car：</label>
+        <select  name="car">
+          <option value="萨博">萨博</option>
+          <option value="2">2</option>
+        </select>
+        <button>提交</button>
+      </div>
+      </form>
+    </div>
+
+  </body>
+</html>

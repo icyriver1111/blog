@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    div{
+      width: 300px;
+      height: 200px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>1</span>
+      <span>2</span>
+      <div>3</div>
+
+    </div>
+
+    <script>
+    for(var i=0;i<document.all.length;i++){
+    var element = document.all[i];
+    var getColor = '#'+Math.floor(Math.random()*0xffffff).toString(16);
+    element.style.border = '1 px ' + getColor;
+  }
+
+    </script>
+
+  </body>
+
+</html>
