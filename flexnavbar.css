@@ -1,0 +1,184 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding:0;
+  min-width: 320px;
+  background: #f4f4f4;
+  font-family: Helvetica, sans-serif;
+}
+ul, ol, li, input{
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(http://img15.3lian.com/2015/f1/31/d/89.jpg);
+}
+a{
+  text-decoration: none;
+}
+.header{
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  background: rgba(255,255,255,0.9);
+}
+.header .container{
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+}
+.header .nav>li{
+  display: flex;
+  text-align: center;
+}
+.header .nav a{
+  width: 100%;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.header .nav a:hover{
+  color: #333;
+}
+.logo{
+  flex:1;
+  padding: 10px;
+}
+.logo img{
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+.nav-toggle{
+  color: #666;
+  display: none;
+  font-size: 24px;
+  top: 10px;
+  right: 10px;
+  width: 43px;
+  height: 46px;
+  border-radius: 4px;
+  position: absolute;
+  text-align: center;
+  line-height: 46px;
+  border: 1px solid #ccc;
+}
+.nav-toggle-checkbox{
+  width: 46px;
+  height: 46px;
+  opacity: 0;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  cursor: pointer;
+  position: absolute;
+}
+
+.nav-toggle-checkbox:checked ~.nav {
+  display: flex;
+}
+
+.main-nav{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav>li{
+  flex: 1 1 150px;
+  position: relative;
+  justify-content: center;
+}
+.main-nav>li>a{
+  font-size: 18px;
+  font-weight: 300;
+}
+.main-nav >li::after{
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  transition: .5s;
+  background: #eb0028;
+
+}
+.main-nav >li:hover::after{
+  height: 3px;
+}
+.social-nav{
+  flex:1;
+  display: flex;
+  margin-right: 10px;
+  justify-content: flex-end;
+}
+
+.social-nav>li{
+  flex:0 1 60px;
+}
+.social-nav>li>a{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media only screen and(max-width: 1000px) {
+  main{
+    background-size: cover;
+  }
+
+}
+@media only screen and (max-width:900px) {
+  .main-nav>li{
+    flex-basis: 120px;
+  }
+  .social-nav>li{
+    flex-basis: 50px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .header .container{
+    flex-wrap: wrap;
+  }
+  .header .nav{
+    display: none;
+  }
+  .header .nav>li>a{
+    height: 60px;
+  }
+  .header .nav-toggle{
+    display: block;
+  }
+  .header-toggle-checkbox:checked ~.logo{
+    border-bottom: 1px solid #ddd;
+  }
+  .logo, .main-nav, .social-nav {
+    flex-basis: 100%;
+  }
+  .main-nav{
+    flex-wrap: wrap;
+  }
+  .main-nav>li{
+    flex-basis: 100%;
+  }
+  .social-nav>li{
+    flex: 1;
+  }
+  .main-nav>li::after{
+    height: 2px !important;
+    transform: scale(0);
+  }
+  .main-nav>li:hover::after {
+    transform: scale(1);
+  }
+}

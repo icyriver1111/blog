@@ -1,0 +1,72 @@
+
+body{
+  background: #eee;
+  margin: 0;
+  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  height: 100%;
+}
+
+.layout {
+  width: 800px;
+  margin: 0 auto;
+}
+header{
+  text-align: center;
+}
+header h1{
+  color: #808080;
+  font-size: 42px;
+  margin-top: 50px;
+  letter-spacing: 10px;
+}
+header p{
+  color: #c0c0c0;
+}
+header ul,
+main ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  padding-left: 0px;
+}
+ul li{
+  margin-right: 13px;
+}
+ul li:nth-last-child(1){
+  margin-right: 0;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+  color: #333;
+}
+.btn{
+  display: block;
+  background-color: rgba(30,204,149, .86);
+  border-radius: 3px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  border: 1px solid #28BF8F;
+}
+.btn:hover{
+  background-color: transparent;
+  border: 1px solid #20B17F;
+}
+main{
+  text-align: center;
+}
+main>img{
+  width: 400px;
+  height: 300px;
+}
+
+footer{
+  text-align: center;
+}
+footer span a{
+  color:#c0c0c0;
+}
