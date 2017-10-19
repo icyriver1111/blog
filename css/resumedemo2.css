@@ -71,6 +71,7 @@ header {
 }
 .contacts>h3{
   border-color: #000;
+  margin-right: -40px;
 }
 .contacts>p {
  margin: 5px 0;
