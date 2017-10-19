@@ -69,6 +69,7 @@ header {
   border-radius: 50%;
   margin-right: 30px;
 }
+/*.contact h3 borderbottem连上右边*/
 .contacts>h3{
   border-color: #000;
   margin-right: -40px;
