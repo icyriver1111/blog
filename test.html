@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+function friendlyDate(time){
+  var curDate = Date.now()
+  var offset = Math.abs(curDate-time)
+  var totalMinutes = Math.floor(offset/1000/60)
+  var oneHour = 60
+  var oneDay = 24*60
+  var oneMonth = 30*oneDay
+  var oneYear = 12*oneMonth
+
+  if(totalMinutes<1){
+    return '刚刚';
+  }
+  if(1<=totalMinutes && totalMinutes<oneHour){
+    return '3分钟前';
+  }
+  if(oneHour<=totalMinutes && totalMinutes<oneDay){
+    return '8小时前';
+  }
+  if(oneDay<=totalMinutes && totalMinutes<oneMonth){
+    return '8小时前';
+  }
+
+  if( oneMonth<=totalMinutes && totalMinutes<oneYear){
+    return '2个月前';
+  }
+
+  if(oneYear<=totalMinutes){
+    return '8年前';
+  }
+}
+  var str = friendlyDate( '1484286699422' ) //  1分钟前
+  var str2 = friendlyDate('1483941245793')
+  console.log(str)
+  console.log(str2)
+
+
+
+
+
+  // switch(totalMinutes){
+  //   case caseJust:
+  //     return '刚刚';
+  //     break;
+  //   case caseMinute:
+  //     return '3分钟前';
+  //     break;
+  //   case caseHour:
+  //     return '8小时前';
+  //     break;
+  //   case caseDay:
+  //     return '3天前';
+  //     break;
+  //   case caseMonth:
+  //     return '2个月前';
+  //     break;
+  //   case caseYear:
+  //     return '8年前';
+  //     break;
+  // }
+
+// var str = friendlyDate( '1484286699422' ) //  1分钟前
+// var str2 = friendlyDate('1483941245793')
+// console.log(str)
+// console.log(str2)
+
+// function friendlyDate(time){
+//       var nowTime = new Date().getTime()
+//       var timeInterval = nowTime - time
+//       if (timeInterval < 60 * 1000 && timeInterval> 0) {
+//         return "刚刚"
+//      }
+//      if (timeInterval < 60 * 60 * 1000 && timeInterval >= 60 * 1000) {
+//         return "3分钟前"
+//      }
+//      if (timeInterval < 24 * 60 * 60 * 1000 && timeInterval >= 60 * 60 * 1000) {
+//         return "8小时前"
+//      }
+//      if (timeInterval < 30 * 24 * 60 * 60 * 1000 && timeInterval >= 24 * 60 * 60 * 1000) {
+//         return "3天前"
+//      }
+//      if (timeInterval < 12 * 30 * 24 * 60 * 60 * 1000 && timeInterval >= 30 * 24 * 60 * 60 * 1000) {
+//         return "2个月前"
+//      }
+//      if (timeInterval >= 12 * 30 * 24 * 60 * 60 * 1000) {
+//         return "8年前"
+//      }
+// }
+// var str = friendlyDate( '1484286699422' )
+// var str2 = friendlyDate('1508842392943')
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
