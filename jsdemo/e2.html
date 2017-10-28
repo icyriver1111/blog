@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul class="ct">
+        <li data-img="../images/about1.jpg">鼠标放置查看图片1</li>
+        <li data-img="../images/about2.jpg">鼠标放置查看图片2</li>
+        <li data-img="../images/about3.jpg">鼠标放置查看图片3</li>
+    </ul>
+    <div class="img-preview">
+
+    </div>
+
+
+
+
+<script>
+   var ct = document.querySelector('.ct')
+   var imgPre = document.querySelector('.img-preview')
+   var img = document.createElement('img')
+
+
+   ct.addEventListener('mouseover',function(e){
+     var attr = e.target.getAttribute('data-img')
+     //console.log(attr)
+     img.setAttribute('src', attr)
+     imgPre.appendChild(img)
+   })
+
+
+
+</script>
+
+
+
+  </body>
+</html>

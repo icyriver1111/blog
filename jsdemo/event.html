@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="wrap">
+      <button id="btn">clickme</button>
+      <button id="cancel">
+        <a href="#">delete</a></button>
+    </div>
+
+
+   <script>
+   var cancel = document.querySelector('#cancel')
+   cancel.onclick = function(){
+     console.log('hehe')
+   }
+
+   cancel.addEventListener('click', function(e){
+     console.log(this.innerHTML)
+     console.log(e.target)
+   })
+   </script>
+
+
+  </body>
+</html>
